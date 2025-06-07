@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Oráculo do Templo Interno</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f2f2f2;
+            font-family: 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background-color: #2a2a2a;
+        }
+        button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        .frase {
+            font-size: 20px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .titulo {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .label {
+            font-size: 18px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        .sensacao {
+            font-size: 18px;
+            margin-top: 15px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">Oráculo do Templo Interno</div>
+        <div class="label">Clique abaixo para consultar uma mensagem</div>
+        <button onclick="sortearFrase()">Consultar</button>
+        <div id="sensacao" class="sensacao"></div>
+        <div id="resultado" class="frase"></div>
+    </div>
+
+    <script>
+        const dados = [
+            { sensacao: "Saudade 🌙", frase: "No vazio que deixa a ausência, florescem lembranças silenciosas." },
+            { sensacao: "Esperança 🔥", frase: "Mesmo na noite mais escura, uma fagulha insiste em arder." },
+            { sensacao: "Solidão 🌌", frase: "Na imensidão do silêncio, encontro a voz que ninguém mais escuta." },
+            { sensacao: "Medo 🦉", frase: "O medo é sombra que se dissolve na coragem do primeiro passo." },
+            { sensacao: "Amor ❤️", frase: "O amor é o fio invisível que tece mundos entre corações distantes." },
+            { sensacao: "Tristeza 🌧️", frase: "Chuva que lava a alma, preparando o solo para flores novas." },
+            { sensacao: "Coragem 🦁", frase: "O coração que bate no ritmo do desconhecido, desafia o abismo." },
+            { sensacao: "Gratidão 🙏", frase: "No silêncio do olhar, a alma agradece os gestos invisíveis." },
+            { sensacao: "Confusão 🪞", frase: "Entre espelhos quebrados, busco o reflexo da minha verdade." },
+            { sensacao: "Liberdade 🕊️", frase: "As asas do espírito se abrem quando o medo se dissolve no vento." },
+            { sensacao: "Frio na espinha ❄️", frase: "O arrepio é o sussurro do desconhecido se aproximando." },
+            { sensacao: "Peso no peito 🪨", frase: "O peso invisível que ensina a arte de soltar." },
+            { sensacao: "Borboletas no estômago 🦋", frase: "O voo inquieto da esperança antes do salto." },
+            { sensacao: "Nó na garganta 🎭", frase: "A voz presa que guarda o que ainda não foi dito." },
+            { sensacao: "Calor na face 🔥", frase: "O fogo da vergonha ou da paixão que queima em silêncio." },
+            { sensacao: "Tensão nos ombros 🏋️", frase: "O fardo que o corpo carrega antes do alívio." },
+            { sensacao: "Respiração presa 🌬️", frase: "O suspiro contido é promessa de libertação." },
+            { sensacao: "Tremor nas mãos 🤲", frase: "A dança incerta do medo e da vontade." },
+            { sensacao: "Dor aguda ⚡", frase: "O grito silencioso que desperta para a vida." },
+            { sensacao: "Silêncio na mente 🕉️", frase: "O espaço sagrado onde nascem os pensamentos." }
+        ];
+
+        function sortearFrase() {
+            const index = Math.floor(Math.random() * dados.length);
+            document.getElementById("sensacao").textContent = dados[index].sensacao;
+            document.getElementById("resultado").textContent = `""`;
+        }
+    </script>
+</body>
+</html>
